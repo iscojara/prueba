@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#miboton").on("click",sumar);
+        });
+        function sumar(){
+            var n1= parseInt($("#txtn1").val());
+            var n2= parseInt($("#txtn2").val());
+            var resultado = (n1 + n2);
+            $(".respuesta").text("La respuesta es: "+resultado);
+            
+        }
+        $(function(){
+            $("#miboto").on("click",restar);
+        });
+        function restar(){
+            var n1= parseInt($("#txtn1").val());
+            var n2= parseInt($("#txtn2").val());
+            var resultado = (n1 - n2);
+            $(".respuesta").text("La respuesta es: "+resultado);
+            
+        }
+        $(function(){
+            $("#mibot").on("click",mult);
+        });
+        function mult(){
+            var n1= parseInt($("#txtn1").val());
+            var n2= parseInt($("#txtn2").val());
+            var resultado = (n1 * n2);
+            $(".respuesta").text("La respuesta es: "+resultado);
+            
+        }
+        $(function(){
+            $("#mibo").on("click",div);
+        });
+        function div(){
+            var n1= parseInt($("#txtn1").val());
+            var n2= parseInt($("#txtn2").val());
+            var resultado = (n1 / n2);
+            $(".respuesta").text("La respuesta es: "+resultado);
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Calculadora</legend>
+            <table>
+                <tr></tr>
+                <tr>
+                    <td>
+                        Ingrese numero 1:
+                    </td>
+                    <td>
+                        <input type="number" id="txtn1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ingrese numero 2:
+                    </td>
+                    <td>
+                        <input type="number" id="txtn2">
+                    </td>
+                </tr>
+            </table>
+           <table>
+               <tr>
+                   <td><button type="button"  id="miboton">+</button></td>
+                   <td><button type="button" id="miboto">-</button></td>
+                   <td><button type="button" id="mibot">*</button></td>
+                   <td><button type="button" id="mibo">/</button></td>
+               </tr>
+           </table>
+
+            <table><tr></tr><tr><label for="res" class="respuesta"></label><td></td></tr></table>
+        </fieldset>
+    </form>
+</body>
+</html>
